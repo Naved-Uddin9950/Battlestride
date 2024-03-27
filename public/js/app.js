@@ -1,6 +1,5 @@
 const settings = document.getElementById('settings');
 const menu = document.querySelector('.settings-list');
-const play = document.getElementById('play');
 
 settings.addEventListener('click', () => {
     if(menu.style.display == "none") {
@@ -9,8 +8,4 @@ settings.addEventListener('click', () => {
     } else {
         menu.style.display = "none";
     }
-});
-
-play.addEventListener('click', () => {
-    window.location.href = 'views/town.html';
 });

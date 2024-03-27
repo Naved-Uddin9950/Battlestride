@@ -1,11 +1,17 @@
+const loader = document.querySelector('.loader');
+const container = document.querySelector('.container');
+const locked = document.querySelectorAll('.locked');
+const back = document.querySelector('.back-arrow');
+
+console.log(locked);
+
 let story = localStorage.getItem('story');
 
-try {
-    if(!story) {
-        console.log('Starting your story');
-    } else {
-        console.log('Enter ur chapter');
-    }
-} catch (error) {
-    console.log('Error : ' + error);
-}
+window.addEventListener('load', () => {
+    loader.style = 'display: none !important';
+    container.style.display = 'flex';
+});
+
+back.addEventListener('click', () => {
+    window.location.href = '../../../views/town.html';
+});
