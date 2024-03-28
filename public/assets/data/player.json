@@ -1,0 +1,194 @@
+{
+    "human": {
+      "warrior": {
+        "stats": {
+          "hp": 10,
+          "mp": 8,
+          "str": 10,
+          "def": 9,
+          "matk": 7,
+          "mdef": 8,
+          "agl": 8
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/warrior.png",
+            "teen": "../public/assets/images/player/Human/male/teen/warrior.png",
+            "adult": "../public/assets/images/player/Human/male/adult/warrior.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/warrior.png",
+            "old": "../public/assets/images/player/Human/male/old/warrior.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/warrior.png",
+            "teen": "../public/assets/images/player/Human/female/teen/warrior.png",
+            "adult": "../public/assets/images/player/Human/female/adult/warrior.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/warrior.png",
+            "old": "../public/assets/images/player/Human/female/old/warrior.png"
+          }
+        }
+      },
+      "wizard": {
+        "stats": {
+          "hp": 7,
+          "mp": 10,
+          "str": 7,
+          "def": 7,
+          "matk": 10,
+          "mdef": 8,
+          "agl": 8
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/wizard.png",
+            "teen": "../public/assets/images/player/Human/male/teen/wizard.png",
+            "adult": "../public/assets/images/player/Human/male/adult/wizard.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/wizard.png",
+            "old": "../public/assets/images/player/Human/male/old/wizard.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/wizard.png",
+            "teen": "../public/assets/images/player/Human/female/teen/wizard.png",
+            "adult": "../public/assets/images/player/Human/female/adult/wizard.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/wizard.png",
+            "old": "../public/assets/images/player/Human/female/old/wizard.png"
+          }
+        }
+      },
+      "ranger": {
+        "stats": {
+          "hp": 8,
+          "mp": 7,
+          "str": 8,
+          "def": 7,
+          "matk": 8,
+          "mdef": 7,
+          "agl": 10
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/ranger.png",
+            "teen": "../public/assets/images/player/Human/male/teen/ranger.png",
+            "adult": "../public/assets/images/player/Human/male/adult/ranger.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/ranger.png",
+            "old": "../public/assets/images/player/Human/male/old/ranger.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/ranger.png",
+            "teen": "../public/assets/images/player/Human/female/teen/ranger.png",
+            "adult": "../public/assets/images/player/Human/female/adult/ranger.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/ranger.png",
+            "old": "../public/assets/images/player/Human/female/old/ranger.png"
+          }
+        }
+      },
+      "healer": {
+        "stats": {
+          "hp": 8,
+          "mp": 10,
+          "str": 6,
+          "def": 8,
+          "matk": 8,
+          "mdef": 10,
+          "agl": 6
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/healer.png",
+            "teen": "../public/assets/images/player/Human/male/teen/healer.png",
+            "adult": "../public/assets/images/player/Human/male/adult/healer.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/healer.png",
+            "old": "../public/assets/images/player/Human/male/old/healer.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/healer.png",
+            "teen": "../public/assets/images/player/Human/female/teen/healer.png",
+            "adult": "../public/assets/images/player/Human/female/adult/healer.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/healer.png",
+            "old": "../public/assets/images/player/Human/female/old/healer.png"
+          }
+        }
+      },
+      "summoner": {
+        "stats": {
+          "hp": 7,
+          "mp": 10,
+          "str": 6,
+          "def": 7,
+          "matk": 10,
+          "mdef": 7,
+          "agl": 8
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/summoner.png",
+            "teen": "../public/assets/images/player/Human/male/teen/summoner.png",
+            "adult": "../public/assets/images/player/Human/male/adult/summoner.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/summoner.png",
+            "old": "../public/assets/images/player/Human/male/old/summoner.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/summoner.png",
+            "teen": "../public/assets/images/player/Human/female/teen/summoner.png",
+            "adult": "../public/assets/images/player/Human/female/adult/summoner.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/summoner.png",
+            "old": "../public/assets/images/player/Human/female/old/summoner.png"
+          }
+        }
+      },
+      "paladin": {
+        "stats": {
+          "hp": 10,
+          "mp": 8,
+          "str": 8,
+          "def": 10,
+          "matk": 7,
+          "mdef": 9,
+          "agl": 8
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/paladin.png",
+            "teen": "../public/assets/images/player/Human/male/teen/paladin.png",
+            "adult": "../public/assets/images/player/Human/male/adult/paladin.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/paladin.png",
+            "old": "../public/assets/images/player/Human/male/old/paladin.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/paladin.png",
+            "teen": "../public/assets/images/player/Human/female/teen/paladin.png",
+            "adult": "../public/assets/images/player/Human/female/adult/paladin.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/paladin.png",
+            "old": "../public/assets/images/player/Human/female/old/paladin.png"
+          }
+        }
+      },
+      "necromancer": {
+        "stats": {
+          "hp": 8,
+          "mp": 9,
+          "str": 6,
+          "def": 8,
+          "matk": 10,
+          "mdef": 10,
+          "agl": 9
+        },
+        "image": {
+          "male": {
+            "young": "../public/assets/images/player/Human/male/young/necromancer.png",
+            "teen": "../public/assets/images/player/Human/male/teen/necromancer.png",
+            "adult": "../public/assets/images/player/Human/male/adult/necromancer.png",
+            "middle": "../public/assets/images/player/Human/male/middleage/necromancer.png",
+            "old": "../public/assets/images/player/Human/male/old/necromancer.png"
+          },
+          "female": {
+            "young": "../public/assets/images/player/Human/female/young/necromancer.png",
+            "teen": "../public/assets/images/player/Human/female/teen/necromancer.png",
+            "adult": "../public/assets/images/player/Human/female/adult/necromancer.png",
+            "middle": "../public/assets/images/player/Human/female/middleage/necromancer.png",
+            "old": "../public/assets/images/player/Human/female/old/necromancer.png"
+          }
+        }
+      }
+    }
+  }
+  

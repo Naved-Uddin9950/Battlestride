@@ -20,21 +20,25 @@
     </button>
 
     <div class="container d-flex flex-row p-2 ms-5 pt-5">
+        
+        <!-- Character Preview -->
         <div class="preview d-flex flex-row me-5 mt-2" id="character-preview"></div>
 
+
+        <!-- Character Generator -->
         <div class="options d-flex flex-column mb-3 mt-2">
             <form action="">
                 <!-- Username Field -->
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" required min="3" max="16">
                 </div>
 
                 <!-- Class & Race Selection Field -->
                 <div class="class-container d-flex ">
                     <!-- Class Selection Field -->
                     <div class="form-floating mb-3 me-3 w-100">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <select class="form-select" id="class-selection" aria-label="Floating label select example" required>
                             <option value="Warrior" selected>Warrior</option>
                             <option value="Wizard">Wizard</option>
                             <option value="Ranger">Ranger</option>
@@ -48,7 +52,7 @@
 
                     <!-- Race Selection Field -->
                     <div class="form-floating mb-3 me-3 w-100">
-                        <select class="form-select" aria-label="Default select example" id="class-selection" aria-label="Floating label select example">
+                        <select class="form-select" aria-label="Default select example" id="bloodline-selection" aria-label="Floating label select example" required>
                             <option value="Human" selected>Human</option>
                             <option value="Elf">Elf</option>
                             <option value="Dwarf">Dwarf</option>
@@ -59,7 +63,7 @@
                             <option value="Angel">Angel</option>
                             <option value="Undead">Undead</option>
                         </select>
-                        <label for="floatingSelect">Select Class</label>
+                        <label for="floatingSelect">Select Bloodeline</label>
                     </div>
                 </div>
 
@@ -74,30 +78,13 @@
                     <!-- Age Input Field -->
                     <div class="input-group">
                         <span class="input-group-text">Age</span>
-                        <input type="text" aria-label="Age" class="form-control">
-                        <!-- <input type="text" aria-label="Last name" class="form-control"> -->
-                      </div>
+                        <input type="text" aria-label="Age" class="form-control" id="age" value="14" required>
+                    </div>
                 </div>
                 
-                <!-- Hairs Selection Field -->
-                <div class="checkbox-container d-flex flex-row mb-3">                      
-                    <div class="form-check me-2">
-                        <input class="form-check-input" type="checkbox" value="Hair" id="flexCheckDefault" checked>
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Hair
-                        </label>
-                    </div>
-                    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Beard" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Beard
-                        </label>
-                    </div>
-                </div>
 
                 <!-- Stats Selection Field -->
-                <div class="stats-container">
+                <div class="stats-container mb-3">
                     <div class="stats-bar d-flex justify-content-between">
                         <label for="hp-stats" class="form-label me-3">Health Points</label>
                         <input type="range" class="form-range w-75" min="0" max="5" step="1" id="hp-stats">
@@ -129,7 +116,7 @@
                 </div>
                         
                 <button type="reset" class="btn btn-danger">Reset</button>
-                <button type="submit" class="btn btn-success">Next</button>
+                <button type="submit" class="btn btn-success" id="submit">Next</button>
             </form>
         </div>
     </div>
@@ -145,8 +132,8 @@
     </div>
 
 
-    <script src="https://kit.fontawesome.com/8e0a766b60.js" crossorigin="anonymous"></script>
     <script src="../public/js/player.js"></script>
+    <script src="https://kit.fontawesome.com/8e0a766b60.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
