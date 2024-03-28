@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battlestride RPG | Player</title>
+    <link rel="stylesheet" href="../public/css/app.css">
+    <link rel="stylesheet" href="../public/css/player.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-solid-straight/css/uicons-solid-straight.css'> -->
+</head>
+<body>
+    <div class="back-btn">
+        <i class="fa-solid fa-arrow-left back-arrow"></i>
+    </div>
+
+    <button class="btn loader" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status">Loading...</span>
+    </button>
+
+    <div class="container d-flex flex-row p-2 ms-5 pt-5">
+        <div class="preview d-flex flex-row me-5 mt-2" id="character-preview"></div>
+
+        <div class="options d-flex flex-column mb-3 mt-2">
+            <form action="">
+                <!-- Username Field -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <!-- Class & Race Selection Field -->
+                <div class="class-container d-flex ">
+                    <!-- Class Selection Field -->
+                    <div class="form-floating mb-3 me-3 w-100">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="Warrior" selected>Warrior</option>
+                            <option value="Wizard">Wizard</option>
+                            <option value="Ranger">Ranger</option>
+                            <option value="Healer">Healer</option>
+                            <option value="Summoner">Summoner</option>
+                            <option value="Paladin">Paladin</option>
+                            <option value="Necromancer">Necromancer</option>
+                        </select>
+                        <label for="floatingSelect">Select Class</label>
+                    </div>
+
+                    <!-- Race Selection Field -->
+                    <div class="form-floating mb-3 me-3 w-100">
+                        <select class="form-select" aria-label="Default select example" id="class-selection" aria-label="Floating label select example">
+                            <option value="Human" selected>Human</option>
+                            <option value="Elf">Elf</option>
+                            <option value="Dwarf">Dwarf</option>
+                            <option value="Orc">Orc</option>
+                            <option value="Dragonborn">Dragonborn</option>
+                            <option value="Tiefling">Tiefling</option>
+                            <option value="Demon">Demon</option>
+                            <option value="Angel">Angel</option>
+                            <option value="Undead">Undead</option>
+                        </select>
+                        <label for="floatingSelect">Select Class</label>
+                    </div>
+                </div>
+
+                <!-- Age & Gender Selection Field -->
+                <div class="gender-container mb-3 d-flex flex-row">
+                    <input type="radio" class="btn-check " name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                    <label class="btn btn-outline-success me-3" for="success-outlined">Male</label>
+
+                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                    <label class="btn btn-outline-danger me-3" for="danger-outlined">Female</label>
+
+                    <!-- Age Input Field -->
+                    <div class="input-group">
+                        <span class="input-group-text">Age</span>
+                        <input type="text" aria-label="Age" class="form-control">
+                        <!-- <input type="text" aria-label="Last name" class="form-control"> -->
+                      </div>
+                </div>
+                
+                <!-- Hairs Selection Field -->
+                <div class="checkbox-container d-flex flex-row mb-3">                      
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="Hair" id="flexCheckDefault" checked>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Hair
+                        </label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Beard" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Beard
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Stats Selection Field -->
+                <div class="stats-container">
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="hp-stats" class="form-label me-3">Health Points</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="hp-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="mp-stats" class="form-label me-3">Magic Points</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="mp-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="str-stats" class="form-label me-3">Strength</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="str-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="def-stats" class="form-label me-3">Defense</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="def-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="mat-stats" class="form-label me-3">Magic Attack</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="mat-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="mdef-stats" class="form-label me-3">Magic Defense</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="mdef-stats">
+                    </div>
+                    <div class="stats-bar d-flex justify-content-between">
+                        <label for="agl-stats" class="form-label me-3">Agility</label>
+                        <input type="range" class="form-range w-75" min="0" max="5" step="1" id="agl-stats">
+                    </div>
+                </div>
+                        
+                <button type="reset" class="btn btn-danger">Reset</button>
+                <button type="submit" class="btn btn-success">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="side-container">
+        <div><button id="settings"><span><i class="fa-solid fa-gear"></i></span></button></div>
+        <ul class="settings-list">
+            <li id="sounds">Sounds</li>
+            <li id="shop">Shop</li>
+            <li id="redeem">Redeem</li>
+            <li id="reset">Reset</li>
+        </ul>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/8e0a766b60.js" crossorigin="anonymous"></script>
+    <script src="../public/js/player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

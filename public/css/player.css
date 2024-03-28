@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/images/background/player_screen.jpeg');
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Character preview screen */
+.preview {
+    width: 30vw;
+    height: 85vh;
+    border: 1px solid #F0F8FF;
+}
+
+
+/* Character Generation Options Screen */
+.options {
+    border: 1px solid #F0F8FF;
+    width: 45vw;
+    height: 85vh;
+}
+
+form {
+    padding: 10px 10px;
+    color: #F0F8FF;
+    font-weight: bold;
+}

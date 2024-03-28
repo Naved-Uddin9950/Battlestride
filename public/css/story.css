@@ -17,16 +17,6 @@ body {
     background-position: center;
 }
 
-.loader {
-    font-size: 22px !important;
-    font-weight: bold !important;
-    border: none !important;
-    color: #FFFF !important;
-    position: fixed;
-    top: var(--top);
-    left: var(--left);
-}
-
 .container {
     width: 100%;
     height: 100%;

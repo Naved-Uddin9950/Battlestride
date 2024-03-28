@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     container.style = 'display: flex !important';
 });
 
+
 // Settings Menu
 const settings = document.getElementById('settings');
 const menu = document.querySelector('.settings-list');
@@ -20,20 +21,10 @@ settings.addEventListener('click', () => {
     }
 });
 
+
 // Back Button
-const back = document.querySelector('.back-arrow');
+const back = document.querySelector('.back-btn');
 
 back.addEventListener('click', () => {
-    window.location.href = '../index.html';
-});
-
-
-// Story screen
-const story = document.getElementById('story');
-const training = document.getElementById('training');
-const arena = document.getElementById('arena');
-const store = document.getElementById('store');
-
-story.addEventListener('click', () => {
-    window.location.href = '../views/story.html';
+    window.location.href = '../../index.html';
 });

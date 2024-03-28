@@ -1,5 +1,11 @@
 :root {
     --side-left: calc(90vw - 100px);
+    --top: calc(50vh - 50px);
+    --left: calc(50vw - 60px);
+}
+
+.container {
+    display: none;
 }
 
 /* Back button */
@@ -10,6 +16,17 @@
     top: 10px;
     left: 10px;
     color: #F0F8FF;
+}
+
+/* Loader */
+.loader {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    border: none !important;
+    color: #FFFF !important;
+    position: fixed;
+    top: var(--top);
+    left: var(--left);
 }
 
 
