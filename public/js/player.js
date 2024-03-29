@@ -1,18 +1,26 @@
+// player variables
+let db;
+let player;
+let stats;
+let gender;
+let ageGroup;
+
 // Loader
 const loader = document.querySelector('.loader');
 const container = document.querySelector('.container');
 
-let db;
-let player;
 
 window.addEventListener('load', () => {
     loader.style = 'display: none !important';
     container.style = 'display: flex !important';
-    
+
     (async () => {
         db = await getPlayer();
         player = db.human.warrior.image.male.teen;
-        preview.innerHTML += `<img src="${player}" alt="Young Male Human Warrior">`;
+        stats = db.human.warrior.stats;
+        gender = 'male';
+        ageGroup = 'teen';
+        preview.innerHTML += `<img src="${player}" alt="Young Male Human Warrior" id="player-preview">`;
     })();
 });
 
@@ -71,18 +79,69 @@ const submit = document.getElementById('submit');
 submit.addEventListener('click', validate);
 
 
-// Class Selection
-const job = document.getElementById('class-selection');
+// Gender Selection
+const genMale = document.getElementById('success-outlined');
+const genFemale = document.getElementById('danger-outlined');
 
-job.addEventListener('change', () => {
-    console.log(job.value);
+genMale.onchange = () => {
+    gender = 'male';
+    showPlayer();
+};
+
+genFemale.onchange = () => {
+    gender = 'female';
+    showPlayer();
+};
+
+
+// Age Selection
+age.addEventListener('change', () => {
+    let ageValue =  parseInt(age.value);
+    
+    if(ageValue>=14 && ageValue<=17) {
+        ageGroup = 'teen';
+    } else if(ageValue>=18 && ageValue<=21) {
+        ageGroup = 'young';
+    } else if(ageValue>=22 && ageValue<=30) {
+        ageGroup = 'adult';
+    } else if(ageValue>=31 && ageValue<=49) {
+        ageGroup = 'middle';
+    } else if(ageValue>=50 && ageValue<=65) {
+        ageGroup = 'old';
+    } else {
+        console.log('Error : Invalid age. Please enter age between 14 to 65');
+    }
+
+    showPlayer();
 });
+
+
+// Class Selection & Bloodline Selection
+const job = document.getElementById('class-selection');
+const race = document.getElementById('bloodline-selection');
+
+const prev = document.getElementById('player-preview');
+
+job.addEventListener('change', () => { showPlayer() });
 
 
 // Character Preview
 const preview = document.getElementById('character-preview');
 
-// preview.innerHTML += '<img src="../public/assets/images/player/Human/male/young/warrior1.png" alt="Young Male Human Warrior">';
+const showPlayer = () => {
+    let selectedClass = (job.value).toLowerCase();
+    let selectedBloodline = (race.value).toLowerCase();
+    
+    let playerID = document.getElementById('player-preview');
+    
+    stats = db[selectedBloodline][selectedClass].stats;
+    player = db[selectedBloodline][selectedClass].image[gender][ageGroup]
+    playerID.remove();
+    
+    preview.innerHTML = `<img src="${player}" alt="${ageGroup} ${gender} ${selectedBloodline} ${selectedClass}" id="player-preview">`;
+    
+    console.log(player);
+}
 
 
 // Get player generation data
