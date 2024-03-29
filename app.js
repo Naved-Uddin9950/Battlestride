@@ -1,13 +1,24 @@
 const express = require('express');
 const app = express();
-const path = require('path');
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Middlewares
+app.use(express.static('public'));
+
+// View Engine
 app.set('view engine', 'ejs');
 
+// Routes
 app.get('/', (req, res) => {
-    res.sendFile('index');
+    res.render('index');
+});
+
+app.get('/create-character', (req, res) => {
+    res.render('player');
+});
+
+app.get('/town', (req, res) => {
+    res.render('town');
 });
 
 app.listen(PORT, () => {

@@ -26,9 +26,9 @@ const is_saved = localStorage.getItem('is_saved');
 
 play.addEventListener('click', () => {
     if(!is_saved) {
-        window.location.href = 'views/player.html';
+        window.location.href = '/create-character';
     } else {
-        window.location.href = 'views/town.html';
+        window.location.href = '/town';
     }
 });
 
