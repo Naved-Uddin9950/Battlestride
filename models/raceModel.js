@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Job = require('./jobSchema');
+const Job = require('./jobModel');
 
 const raceSchema = new mongoose.Schema({
     bloodline : {
