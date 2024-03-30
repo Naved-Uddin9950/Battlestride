@@ -146,7 +146,7 @@ const showPlayer = () => {
 
 // Get player generation data
 const getPlayer = async () => {
-    let URL = '../public/assets/data/player.json';
+    let URL = '../assets/data/player.json';
     let api = await fetch(URL);
     let data = await api.text();
     let json = JSON.parse(data);
